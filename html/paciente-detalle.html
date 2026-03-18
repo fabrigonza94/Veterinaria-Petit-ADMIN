@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle paciente</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+        <h1 class="header-h1"><span class="material-symbols-outlined">Pet_supplies</span>Vet Petit</h1>
+        <ul class="header-ul">
+            <li class="header-ul-li "><a class="header-ul-a" href="../index.html"><span class="material-symbols-outlined">home</span> Dashboard</a></li>
+            <li class="header-ul-li "><a class="header-ul-a" href="pacientes.html"><span class="material-symbols-outlined">Pets</span>Pacientes</a></li>
+            <li class="header-ul-li "><a class="header-ul-a" href="tutores.html"><span class="material-symbols-outlined">Person</span>Tutores</a></li>
+            <li class="header-ul-li "><a class="header-ul-a" href="turnos.html"><span class="material-symbols-outlined">Calendar_today</span>Turnos</a></li>
+        </ul>
+        <button class="logout"><span class="material-symbols-outlined">Logout</span>Cerrar sesión</button>
+    </header>
+      
+    <main>
+      <section class="container-encabezado2">
+        <h2 class="h2-dash">Detalle del Paciente</h2>
+        <a href="pacientes.html" class="back">← Volver</a>
+      </section>
+      <div class="grid">
+        <section class="card">
+          <h3>Firulais</h3>
+          <p>Perro · Labrador · 4 años</p>
+          <p><strong>Tutor:</strong> Juan Pérez</p>
+          <a href="historia-clinica.html" class="btn-primary">🏥 Ver Historia Clínica</a>
+          <div class="actions">
+            <button class="btn">Editar</button>
+           <a href="#modalTurno"><button href="#modalTurno" class="btn">Nuevo Turno</button></a> 
+          </div>
+        </section>
+
+        <section class="card">
+          <h4>Datos Generales</h4>
+          <p><strong>Sexo:</strong> Macho</p>
+          <p><strong>Peso:</strong> 28 kg</p>
+          <p><strong>Fecha Nacimiento:</strong> 12/03/2022</p>
+          <p><strong>Observaciones:</strong> Alérgico al pollo</p>
+        </section>
+
+        <section class="card">
+          <h4>Historia Clínica</h4>
+          <table>
+            <tr>
+              <th>Fecha</th>
+              <th>Motivo</th>
+              <th>Diagnóstico</th>
+              <th>Tratamiento</th>
+            </tr>
+            <tr>
+              <td>10/06/2026</td>
+              <td>Control</td>
+              <td>Saludable</td>
+              <td>---</td>
+            </tr>
+          </table>
+          <button class="btn">+ Nueva Consulta</button>
+        </section>
+
+        <section class="card">
+          <h4>Turnos</h4>
+          <table>
+            <tr>
+              <th>Fecha</th>
+              <th>Hora</th>
+              <th>Motivo</th>
+              <th>Estado</th>
+            </tr>
+            <tr>
+              <td>20/06/2026</td>
+              <td>15:30</td>
+              <td>Vacuna</td>
+              <td>Pendiente</td>
+            </tr>
+          </table>
+        </section>
+
+        <section class="card">
+          <h3>Tutor</h3>
+          <div class="tutor-box">
+            <div class="avatar">JP</div>
+            <div>
+              <p class="tutor-name">Juan Pérez</p>
+              <p class="tutor-info">099 123 456</p>
+              <p class="tutor-info">juan@email.com</p>
+            </div>
+          </div>
+          <a href="tutor-detalle.html" class="btn-link">Ver detalle del tutor →</a>
+        </section>
+
+        <section class="card full">
+          <h2>Historia Clínica</h2>
+          <!-- Microchip -->
+          <div class="hc-section">
+            <h4>Microchip</h4>
+            <p><strong>Número:</strong> 985112003456789</p>
+            <p><strong>Fecha implantación:</strong> 10/03/2024</p>
+          </div>
+          <!-- Vacunas -->
+          <div class="hc-section">
+            <h4>Vacunas</h4>
+            <table>
+              <tr>
+                <th>Vacuna</th>
+                <th>Fecha</th>
+                <th>Próxima dosis</th>
+              </tr>
+              <tr>
+                <td>Antirrábica</td>
+                <td>10/01/2026</td>
+                <td>10/01/2027</td>
+              </tr>
+              <tr>
+                <td>Óctuple</td>
+                <td>15/02/2026</td>
+                <td>15/02/2027</td>
+              </tr>
+            </table>
+          </div>
+          <!-- Peso histórico -->
+          <div class="hc-section">
+            <h4>Peso Histórico</h4>
+            <table>
+              <tr>
+                <th>Fecha</th>
+                <th>Peso</th>
+              </tr>
+              <tr>
+                <td>10/01/2026</td>
+                <td>28 kg</td>
+              </tr>
+              <tr>
+                <td>10/06/2026</td>
+                <td>30 kg</td>
+              </tr>
+            </table>
+          </div>
+          <!-- Alergias -->
+          <div class="hc-section">
+            <h4>Alergias</h4>
+            <ul>
+              <li>Pollo</li>
+              <li>Penicilina</li>
+            </ul>
+          </div>
+          <!-- Estudios -->
+          <div class="hc-section">
+            <h4>Estudios</h4>
+            <ul>
+              <li>Hemograma - 12/01/2026</li>
+              <li>Radiografía cadera - 20/03/2026</li>
+            </ul>
+          </div>
+          <!-- Archivos -->
+          <div class="hc-section">
+            <h4>Archivos Adjuntos</h4>
+            <ul>
+              <li><a href="#">hemograma-enero.pdf</a></li>
+              <li><a href="#">rx-cadera.jpg</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!-- VENTANA MODAL NUEVO TURNO -->
+      <div id="modalTurno" class="modal">
+          <div class="modal-content">
+              <a href="#" class="close">✖</a>
+              <h3>Nuevo Turno</h3>
+              <label>Mascota</label>
+              <select>
+                  <option>Seleccionar mascota</option>
+                  <option>Firulais</option>
+                  <option>Mishi</option>
+              </select>
+              <label>Tutor</label>
+              <select>
+                  <option>Seleccionar tutor</option>
+                  <option>Juan Pérez</option>
+                  <option>Laura Gómez</option>
+              </select>
+              <label>Fecha</label>
+              <input type="date">
+              <label>Hora</label>
+              <input type="time">
+              <label>Motivo</label>
+              <input type="text" placeholder="Ej: Vacuna anual">
+              <label>Estado</label>
+              <select>
+                  <option>Pendiente</option>
+                  <option>Confirmado</option>
+                  <option>Realizado</option>
+                  <option>Cancelado</option>
+              </select>
+              <label>Observaciones</label>
+              <textarea rows="3" placeholder="Notas adicionales..."></textarea>
+              <div class="modal-buttons">
+                  <a href="#" class="cancel">Cancelar</a>
+                  <button class="save">Guardar</button>
+              </div>
+          </div>
+      </div>
+            <!-- VENTANA MODAL NUEVO TURNO -->
+    </main>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Historia Clínica - Firulais</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+        <h1 class="header-h1"><span class="material-symbols-outlined">Pet_supplies</span>Vet Petit</h1>
+        <ul class="header-ul">
+            <li class="header-ul-li "><a class="header-ul-a" href="../index.html"><span class="material-symbols-outlined">home</span> Dashboard</a></li>
+            <li class="header-ul-li "><a class="header-ul-a" href="pacientes.html"><span class="material-symbols-outlined">Pets</span>Pacientes</a></li>
+            <li class="header-ul-li "><a class="header-ul-a" href="tutores.html"><span class="material-symbols-outlined">Person</span>Tutores</a></li>
+            <li class="header-ul-li "><a class="header-ul-a" href="turnos.html"><span class="material-symbols-outlined">Calendar_today</span>Turnos</a></li>
+        </ul>
+        <button class="logout"><span class="material-symbols-outlined">Logout</span>Cerrar sesión</button>
+    </header>
+    <main class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="index.html">Dashboard</a> /
+        <a href="pacientes.html">Pacientes</a> /
+        <a href="paciente-detalle.html">Firulais</a> /
+        <span>Historia Clínica</span>
+      </nav>
+      <!-- Header Mascota -->
+      <section class="card">
+        <div class="hc-header">
+          <div>
+            <h2>Firulais</h2>
+            <p class="subtitle">Perro • Labrador • 4 años</p>
+          </div>
+          <div>
+            <a href="paciente-detalle.html" class="btn-secondary">← Volver</a>
+          </div>
+        </div>
+      </section>
+      <!-- Microchip -->
+      <section class="card">
+        <div class="section-header">
+          <h3>Microchip</h3>
+          <button class="btn-small">Editar</button>
+        </div>
+        <div id="microchip-container"></div>
+      </section>
+      <!-- Vacunas -->
+      <section class="card">
+        <div class="section-header">
+          <h3>Vacunas</h3>
+          <button class="btn-small">+ Agregar</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Vacuna</th>
+              <th>Fecha</th>
+              <th>Próxima dosis</th>
+            </tr>
+          </thead>
+          <tbody id="vacunas-body">
+          </tbody>
+        </table>
+      </section>
+      <!-- Peso -->
+      <section class="card">
+        <div class="section-header">
+          <h3>Peso Histórico</h3>
+          <button class="btn-small">+ Agregar</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Peso</th>
+            </tr>
+          </thead>
+          <tbody id="peso-body">
+          </tbody>
+        </table>
+      </section>
+      <!-- Alergias -->
+      <section class="card">
+        <div class="section-header">
+          <h3>Alergias</h3>
+          <button class="btn-small">+ Agregar</button>
+        </div>
+        <ul id="alergias-list"></ul>
+      </section>
+      <!-- Estudios -->
+      <section class="card">
+        <div class="section-header">
+          <h3>Estudios</h3>
+          <button class="btn-small">+ Agregar</button>
+        </div>
+        <ul id="estudios-list"></ul>
+      </section>
+      <!-- Archivos -->
+      <section class="card">
+        <div class="section-header">
+          <h3>Archivos Adjuntos</h3>
+          <input type="file" id="archivoInput">
+        </div>
+        <ul id="archivos-list"></ul>
+      </section>
+      <!-- MODAL GENERAL -->
+      <div class="modal-overlay1">
+
+        <div class="modal1">
+
+          <div class="modal-header">
+            <h3>Título del formulario</h3>
+            <span class="modal-close">×</span>
+          </div>
+
+          <div class="modal-body">
+
+            <div class="form-group">
+              <label>Campo 1</label>
+              <input type="text">
+            </div>
+
+            <div class="form-group">
+              <label>Campo 2</label>
+              <input type="text">
+            </div>
+
+            <div class="form-group">
+              <label>Fecha</label>
+              <input type="date">
+            </div>
+
+            <div class="form-group">
+              <label>Archivo</label>
+              <input type="file">
+            </div>
+            <div class="form-group">
+              <label for="descripcion">Descripción / Observaciones</label>
+              <textarea id="descripcion" name="descripcion" rows="5" placeholder="Redactar detalle clínico..."></textarea>
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn-secondary">Cancelar</button>
+            <button class="btn-primary">Guardar</button>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+  </body>
+</html>

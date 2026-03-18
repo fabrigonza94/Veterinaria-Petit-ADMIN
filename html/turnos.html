@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Turnos</title>
+        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../style/fonts.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    </head>
+    <body>
+        <header class="header">
+        <h1 class="header-h1"><span class="material-symbols-outlined">Pet_supplies</span>Vet Petit</h1>
+            <ul class="header-ul">
+                <li class="header-ul-li "><a class="header-ul-a" href="../index.html"><span class="material-symbols-outlined">home</span> Dashboard</a></li>
+                <li class="header-ul-li "><a class="header-ul-a" href="pacientes.html"><span class="material-symbols-outlined">Pets</span>Pacientes</a></li>
+                <li class="header-ul-li "><a class="header-ul-a" href="tutores.html"><span class="material-symbols-outlined">Person</span>Tutores</a></li>
+                <li class="header-ul-li "><a class="header-ul-a" href="turnos.html"><span class="material-symbols-outlined">Calendar_today</span>Turnos</a></li>
+            </ul>
+        <button class="logout"><span class="material-symbols-outlined">Logout</span>Cerrar sesión</button>
+    </header>
+        <main>
+            <section class="container-encabezado">
+                <h2 class="h2-dash">Turnos</h2>
+            </section>
+            <section>
+                <div class="filtros-turnos">
+                    <input class="filtros-turnos-fecha" type="date" id="fecha">
+                    <select class="filtros-turnos-options" id="estado">
+                        <option value="">Todos</option>
+                        <option value="pendiente">Pendiente</option>
+                        <option value="confirmado">Confirmado</option>
+                    </select>
+                    <button class="filtros-turnos-buttonfiltrar">Filtrar</button>
+                    <a href="#modalTurno" class="btn">+ Nuevo Turno</a>
+                </div>
+            </section>
+            <section class="turnos">
+                <h3 class="turnos-title">Turnos</h3>
+                <table class="table">
+                    <thead>
+                        <tr class="table-encabezado">
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Mascota</th>
+                            <th>Dueño</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Acá después van los turnos dinámicos -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- VENTANA MODAL NUEVO TURNO -->
+            <div id="modalTurno" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close">✖</a>
+                    <h3>Nuevo Turno</h3>
+                    <label>Mascota</label>
+                    <select>
+                        <option>Seleccionar mascota</option>
+                        <option>Firulais</option>
+                        <option>Mishi</option>
+                    </select>
+                    <label>Tutor</label>
+                    <select>
+                        <option>Seleccionar tutor</option>
+                        <option>Juan Pérez</option>
+                        <option>Laura Gómez</option>
+                    </select>
+                    <label>Fecha</label>
+                    <input type="date">
+                    <label>Hora</label>
+                    <input type="time">
+                    <label>Motivo</label>
+                    <input type="text" placeholder="Ej: Vacuna anual">
+                    <label>Estado</label>
+                    <select>
+                        <option>Pendiente</option>
+                        <option>Confirmado</option>
+                        <option>Realizado</option>
+                        <option>Cancelado</option>
+                    </select>
+                    <label>Observaciones</label>
+                    <textarea rows="3" placeholder="Notas adicionales..."></textarea>
+                    <div class="modal-buttons">
+                        <a href="#" class="cancel">Cancelar</a>
+                        <button class="save">Guardar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- VENTANA MODAL NUEVO TURNO -->
+        </main>
+    </body>
+</html>

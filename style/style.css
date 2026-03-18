@@ -1,0 +1,699 @@
+
+:root {
+  /* 🎨 Colores principales */
+    --color-primary: #2F5D8C;
+    --color-primary-hover: #24496E;
+    --color-accent: #2c7be5;
+    --color-table: #d8d9db;
+
+  /* 🧱 Layout */
+    --color-sidebar: #1E2A38;
+    --color-background: #F4F6F9;
+    --color-card: #e9e1e1;
+    --color-border: #E3E6EA;
+
+  /* 🚦 Estados */
+    --color-success: #2E8B57;
+    --color-warning: #F4A261;
+    --color-danger: #E63946;
+    --color-celeste: #83b2e1;
+    --radius: 8px;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+    --space: 16px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+}
+/*************SIDEBAR***************/
+.header{
+    color: var(--color-card);
+    background-color: var(--color-primary);
+    height: 100vh;
+    width: 15vw;
+    border-right: 1px solid black;
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+.header-h1{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 1px solid black;
+    height: 10vh;
+}
+h1{
+    font-size: 1.7rem;
+    padding-right: 0.5rem;
+}
+.header-ul{
+    height: 80vh;
+    list-style: none;
+    display: flex;
+    display: inline-block;
+    width: 100%;
+}
+.header-ul-li{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+}
+.header-ul-a{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* padding-left: 5rem; */
+    color: var(--color-card);
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+.header-ul-li:hover{
+  background-color: var(--color-celeste);
+  width: 100%;
+}
+.logout{
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 10vh;
+    border: none;
+    font-weight: 400;
+    font-size: 1rem;
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+span.material-symbols-outlined {
+    width: 50%;
+    display: flex;
+    justify-content:space-evenly;
+}  
+
+/****************ENDS SIDEBAR*********************/
+
+/****************DASHBOARD Y CARDS*********************/
+main{
+    width: 80%;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 10rem;
+    padding: 2rem 0 12rem 0;
+    /* background-color: var(--color-card); */
+}
+.card{
+  /* base card used across the app (dashboard cards inherit these) */
+  background: var(--color-card);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 400;
+}
+.card-1 , .card-2 , .card-3{
+  background: var(--color-card);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 400;
+  height: 8rem;
+  width: 20%;
+}
+.h2-dash{
+    color: var(--color-primary);
+    width: 100%;
+    height: 69px;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.badge-pendiente{
+  background:#fef3c7;
+  color:#92400e;
+  padding:4px 8px;
+  border-radius:6px;
+  font-size:12px;
+}
+
+.badge-ok{
+  background:#dcfce7;
+  color:#166534;
+  padding:4px 8px;
+  border-radius:6px;
+  font-size:12px;
+}
+.btn-confirmar{
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:6px 10px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.btn-confirmar:hover{
+  background:#1d4ed8;
+}
+
+.btn-confirmar.disabled{
+  background:#9ca3af;
+  cursor:default;
+}
+.recordatorio-ok{
+  background-color:#f0fdf4;
+  color:#6b7280;
+}
+/**************** ENDS DASHBOARD Y CARDS*********************/
+
+/**************** TURNOS*********************/
+
+.turnos {
+    background-color: var(--color-table);
+    max-width: 80%;
+    margin: auto;
+    height: auto;
+    font-weight: 400;
+    border-radius: 7px;
+}
+.turnos-title{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    border: 1px solid black;
+    border-radius: 7px 7px 0 0;
+    font-weight: 400;
+}
+.table{
+    width: 100%;
+    height: auto;
+    padding-top: 2rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+/*************ENDS TABLA TURNOS**************/
+
+/*************PAGINA TURNOS**************/
+
+.filtros-turnos {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.socio {
+  background-color: #27954e;
+  color: #cedfd5;
+}
+
+.badge.no-socio {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/*************  VENTANAS MODALES nuevo paciente, nuevo tutor ********************************/
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 420px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* buttons: unified base */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  background: var(--color-accent);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 20%;
+  margin-right: 5rem;
+}
+.container-encabezado {
+    width: 85vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid black;
+    background-color: var(--color-background);
+}
+.container-encabezado2 {
+    width: 84vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    background-color: var(--color-background);
+} 
+
+.cancel {
+    background: #ccc;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}
+
+.save {
+  background: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+.radio-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 5px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+/**************************FIN MODALES nuevo paciente, nuevo tutor***************************/
+
+.actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+/* .btn {
+  padding: 8px 12px;
+  background: #2c7be5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+} */
+
+/******BOTON DE VER DETALLES y EDITAR  */
+.btn-ver {
+  padding: 6px 10px;
+  background: var(--color-accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.btn-editar {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #f59e0b;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+.btn-editar:hover {
+  background-color: #d97706;
+}
+/******************************PANTALLA TUTOR ***************************/
+.search-group {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  margin: 20px;
+  padding-left: 1.5rem;
+}
+
+.btntutor {
+  margin: 25px;
+  padding-left: 6.2rem;
+}
+
+/*************DETALLE TUTOR**********/
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+.sub {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.back {
+  text-decoration: none;
+  color: #2c7be5;
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 20px;
+  margin: 20px 20px 0 20px;
+}
+
+.card.full {
+  background-color: var(--color-card);
+  margin-top: 20px;
+}
+.h3-detalleMascota{
+  color: var(--color-primary);
+  margin-bottom: 15px;
+}
+.container-h3-detalleMascota{
+  border-bottom: 1px solid black;
+  width: 100%;
+  text-align: center;
+}
+.stat {
+  margin-bottom: 15px;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: bold;
+  display: block;
+}
+
+.stat-label {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th {
+  text-align: left;
+  font-size: 13px;
+  color: #6c757d;
+  padding-bottom: 10px;
+}
+
+td {
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  padding-left: 0;
+}
+
+
+/*****************************CARD DETALLE TUTOR DESDE PANTALLA PACIENTE***********************/
+.tutor-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background: var(--color-accent);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tutor-name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.tutor-info {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #6c757d;
+}
+
+/*HISTORIA CLINICA detalle por paciente*/
+.hc-section {
+  margin-top: 25px;
+}
+
+.hc-section h4 {
+  margin-bottom: 10px;
+  color: var(--color-accent);
+}
+
+/*Hsitoria clinica pantalla*/
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px;
+}
+
+/*.card {
+  background-color: var(--color-card);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}*/
+
+.hc-header {
+  display: flex;
+  justify-content: space-between;
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+}
+
+  .btn-small {
+    background: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+  }
+
+  .btn-secondary {
+    background: #6c757d;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+
+/**************MODALES DE HISTORIA CLINICA*****************/
+/* Overlay oscuro */
+.modal-overlay1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none; /* Oculto por ahora */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Caja modal */
+.modal1 {
+  background: white;
+  width: 450px;
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Header */
+.modal-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.modal-close {
+  cursor: pointer;
+  font-size: 20px;
+  color: #999;
+}
+
+/* Body */
+.modal-body {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* Footer */
+.modal-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  resize: vertical; /* permite agrandar solo hacia abajo */
+  min-height: 100px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+/**************FIN MODALES DE HISTORIA CLINICA*****************/
