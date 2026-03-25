@@ -1,81 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tutores</title>
-        <link rel="stylesheet" href="../style/style.css">
-        <link rel="stylesheet" href="../style/fonts.css">
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    </head>
-    <body>
-        <header class="header">
-            <h1 class="header-h1"><span class="material-symbols-outlined">Pet_supplies</span>Vet Petit</h1>
-            <ul class="header-ul">
-                <li class="header-ul-li "><a class="header-ul-a" href="../index.html"><span class="material-symbols-outlined">home</span> Dashboard</a></li>
-                <li class="header-ul-li "><a class="header-ul-a" href="pacientes.html"><span class="material-symbols-outlined">Pets</span>Pacientes</a></li>
-                <li class="header-ul-li "><a class="header-ul-a" href="tutores.html"><span class="material-symbols-outlined">Person</span>Tutores</a></li>
-                <li class="header-ul-li "><a class="header-ul-a" href="turnos.html"><span class="material-symbols-outlined">Calendar_today</span>Turnos</a></li>
-            </ul>
-            <button class="logout"><span class="material-symbols-outlined">Logout</span>Cerrar sesión</button>
-        </header>
-        <main>
-            <section class="container-encabezado">
-                <h2 class="h2-dash">Tutores</h2>
-                <a href="#modalTutor" class="btn">+ Nuevo Tutor</a>
-            </section>
-            <div class="search-group">
-                <label for="buscar">Buscar...</label>
-                <div class="input-icon">
-                    <input type="text" id="buscar" placeholder="Buscar tutor...">
-                </div>
-            </div>
-            <section class="turnos">
-                <h3 class="turnos-title">Tutores</h3>
-                <table class="table">
-                    <thead>
-                        <tr class="table-encabezado">
-                            <th>Nombre</th>
-                            <th>Telefono</th>
-                            <th>Mail</th>
-                            <th>Mascotas</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Juan Pérez</td>
-                            <td>099 123 456</td>
-                            <td>juan@email.com</td>
-                            <td>2</td>
-                            <td>
-                                <a href="tutor-detalle.html" class="btn-ver">Ver</a>
-                            </td>
-                        </tr>
-                        <!-- Acá después van los turnos dinámicos -->
-                    </tbody>
-                </table>
-            </section>
-            <section class="btntutor"><a href="#modalTutor" class="btn">+ Nuevo Tutor</a></section>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutores — Vet Petit</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-h1"><span class="material-symbols-outlined">pet_supplies</span>Vet Petit</h1>
+        <ul class="header-ul">
+            <li class="header-ul-li"><a class="header-ul-a" href="../index.html"><span class="material-symbols-outlined">home</span>Dashboard</a></li>
+            <li class="header-ul-li"><a class="header-ul-a" href="pacientes.html"><span class="material-symbols-outlined">pets</span>Pacientes</a></li>
+            <li class="header-ul-li active"><a class="header-ul-a" href="tutores.html"><span class="material-symbols-outlined">person</span>Tutores</a></li>
+            <li class="header-ul-li"><a class="header-ul-a" href="turnos.html"><span class="material-symbols-outlined">calendar_today</span>Turnos</a></li>
+        </ul>
+        <button class="logout"><span class="material-symbols-outlined">logout</span>Cerrar sesión</button>
+    </header>
+    <main>
+        <section class="container-encabezado">
+            <h2 class="h2-dash">Tutores</h2>
+            <a href="#modalTutor" class="btn">+ Nuevo Tutor</a>
+        </section>
+        <div class="search-group">
+            <span class="material-symbols-outlined" style="color:#6b8090;font-size:20px;">search</span>
+            <input type="text" id="buscar" placeholder="Buscar tutor...">
+        </div>
+        <section class="turnos">
+            <h3 class="turnos-title">Listado de Tutores</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>
+                        <th>Mascotas</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Juan Pérez</strong></td>
+                        <td>099 123 456</td>
+                        <td>juan@email.com</td>
+                        <td>2</td>
+                        <td><a href="tutor-detalle.html" class="btn-ver">Ver</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-            <!-- Modal -->
-            <div id="modalTutor" class="modal">
-                <div class="modal-content">
-                    <a href="#" class="close">✖</a>
-                    <h3>Nuevo Tutor</h3>
-                    <label>Nombre</label>
-                    <input type="text">
-                    <label>Teléfono</label>
-                    <input type="text">
-                    <label>Email</label>
-                    <input type="email">
-                    <label for="">Observaciones</label>
-                    <textarea name="text" id="#"></textarea>
-                    <div class="modal-buttons">
-                        <a href="#" class="cancel">Cancelar</a>
-                        <button class="save">Guardar</button>
-                    </div>
+        <div id="modalTutor" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">✖</a>
+                <h3>Nuevo Tutor</h3>
+                <label>Nombre</label>
+                <input type="text" placeholder="Ej: Juan Pérez">
+                <label>Teléfono</label>
+                <input type="text" placeholder="Ej: 099 123 456">
+                <label>Email</label>
+                <input type="email" placeholder="Ej: juan@email.com">
+                <label>Dirección</label>
+                <input type="text" placeholder="Ej: Av. Italia 1234">
+                <label>Observaciones</label>
+                <textarea rows="3" placeholder="Notas adicionales..."></textarea>
+                <div class="modal-buttons">
+                    <a href="#" class="cancel">Cancelar</a>
+                    <button class="save">Guardar</button>
                 </div>
             </div>
-        </main>
-    </body>
+        </div>
+    </main>
+</body>
 </html>

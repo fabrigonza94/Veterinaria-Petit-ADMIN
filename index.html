@@ -1,91 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veterinaria Petit</title>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/fonts.css">
     <link rel="icon" href="img/favicon.png.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
     <header class="header">
-        <h1 class="header-h1"><span class="material-symbols-outlined">Pet_supplies</span>Vet Petit</h1>
+        <h1 class="header-h1">
+            <span class="material-symbols-outlined">pet_supplies</span>
+            Vet Petit
+        </h1>
         <ul class="header-ul">
-            <li class="header-ul-li "><a class="header-ul-a" href="index.html"><span class="material-symbols-outlined">home</span> Dashboard</a></li>
-            <li class="header-ul-li "><a class="header-ul-a" href="html/pacientes.html"><span class="material-symbols-outlined">Pets</span>Pacientes</a></li>
-            <li class="header-ul-li "><a class="header-ul-a" href="html/tutores.html"><span class="material-symbols-outlined">Person</span>Tutores</a></li>
-            <li class="header-ul-li "><a class="header-ul-a" href="html/turnos.html"><span class="material-symbols-outlined">Calendar_today</span>Turnos</a></li>
+            <li class="header-ul-li active"><a class="header-ul-a" href="index.html"><span class="material-symbols-outlined">home</span>Dashboard</a></li>
+            <li class="header-ul-li"><a class="header-ul-a" href="html/pacientes.html"><span class="material-symbols-outlined">pets</span>Pacientes</a></li>
+            <li class="header-ul-li"><a class="header-ul-a" href="html/tutores.html"><span class="material-symbols-outlined">person</span>Tutores</a></li>
+            <li class="header-ul-li"><a class="header-ul-a" href="html/turnos.html"><span class="material-symbols-outlined">calendar_today</span>Turnos</a></li>
         </ul>
-        <button class="logout"><span class="material-symbols-outlined">Logout</span>Cerrar sesión</button>
+        <button class="logout"><span class="material-symbols-outlined">logout</span>Cerrar sesión</button>
     </header>
     <main>
         <section class="container-encabezado">
             <h2 class="h2-dash">Dashboard</h2>
         </section>
-        <section class="cards"> 
-                <div class="card-1 card">
-                    <h3 class="card-number">420</h3>
-                    <p class="card-texto">Pacientes</p>
-                </div>
-                <div class="card-2 card">
-                    <h3 class="card-number">5</h3>
-                    <p class="card-texto">Turnos Hoy</p>
-                </div>
-                <div class="card-3 card">
-                    <h3 class="card-number">3</h3>
-                    <p class="card-texto">Proximas vacunas</p>
-                </div>
+
+        <section class="cards">
+            <div class="card-1 card">
+                <p class="card-texto">Pacientes</p>
+                <h3 class="card-number">420</h3>
+            </div>
+            <div class="card-2 card">
+                <p class="card-texto">Turnos Hoy</p>
+                <h3 class="card-number">5</h3>
+            </div>
+            <div class="card-3 card">
+                <p class="card-texto">Próximas Vacunas</p>
+                <h3 class="card-number">3</h3>
+            </div>
         </section>
-        
+
         <section class="turnos">
-                <h3 class="turnos-title">Recordatorios</h3>
-                <table class="table">
-                    <thead>
-                        <tr class="table-encabezado">
-                            <th>Fecha</th>
-                            <th>Hora</th>
-                            <th>Mascota</th>
-                            <th>Dueño</th>
-                            <th>Estado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Acá después van los turnos dinámicos -->
-                        <tr>
-                            <td>12/06/2026</td>
-                            <td>Firulais</td>
-                            <td>Juan Pérez</td>
-                            <td>Vacuna antirrábica</td>
-
-                            <td>
-                                <span class="badge-pendiente">Pendiente</span>
-                            </td>
-
-                            <td>
-                                <button class="btn-confirmar">Confirmar</button>
-                            </td>
-                        </tr>
-
-                        <tr class="recordatorio-ok">
-                            <td>15/06/2026</td>
-                            <td>Michi</td>
-                            <td>Ana López</td>
-                            <td>Control anual</td>
-
-                            <td>
-                                <span class="badge-ok">Avisado</span>
-                            </td>
-
-                            <td>
-                                <button class="btn-confirmar disabled">Confirmado</button>
-                            </td>
-                        </tr>
-
-        
-                    </tbody>
-                </table>
+            <h3 class="turnos-title">Recordatorios</h3>
+            <table class="table">
+                <thead>
+                    <tr class="table-encabezado">
+                        <th>Fecha</th>
+                        <th>Mascota</th>
+                        <th>Dueño</th>
+                        <th>Motivo</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12/06/2026</td>
+                        <td>Firulais</td>
+                        <td>Juan Pérez</td>
+                        <td>Vacuna antirrábica</td>
+                        <td><span class="badge-pendiente">Pendiente</span></td>
+                        <td><button class="btn-confirmar">Confirmar</button></td>
+                    </tr>
+                    <tr class="recordatorio-ok">
+                        <td>15/06/2026</td>
+                        <td>Michi</td>
+                        <td>Ana López</td>
+                        <td>Control anual</td>
+                        <td><span class="badge-ok">Avisado</span></td>
+                        <td><button class="btn-confirmar disabled">Confirmado</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 </body>

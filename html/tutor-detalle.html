@@ -1,95 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="es">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle tutor</title>
+    <title>Detalle Tutor — Vet Petit</title>
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/fonts.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  </head>
-  <body>
+</head>
+<body>
     <header class="header">
-        <h1 class="header-h1"><span class="material-symbols-outlined">Pet_supplies</span>Vet Petit</h1>
+        <h1 class="header-h1"><span class="material-symbols-outlined">pet_supplies</span>Vet Petit</h1>
         <ul class="header-ul">
-            <li class="header-ul-li "><a class="header-ul-a" href="../index.html"><span class="material-symbols-outlined">home</span> Dashboard</a></li>
-            <li class="header-ul-li "><a class="header-ul-a" href="pacientes.html"><span class="material-symbols-outlined">Pets</span>Pacientes</a></li>
-            <li class="header-ul-li "><a class="header-ul-a" href="tutores.html"><span class="material-symbols-outlined">Person</span>Tutores</a></li>
-            <li class="header-ul-li "><a class="header-ul-a" href="turnos.html"><span class="material-symbols-outlined">Calendar_today</span>Turnos</a></li>
+            <li class="header-ul-li"><a class="header-ul-a" href="../index.html"><span class="material-symbols-outlined">home</span>Dashboard</a></li>
+            <li class="header-ul-li"><a class="header-ul-a" href="pacientes.html"><span class="material-symbols-outlined">pets</span>Pacientes</a></li>
+            <li class="header-ul-li active"><a class="header-ul-a" href="tutores.html"><span class="material-symbols-outlined">person</span>Tutores</a></li>
+            <li class="header-ul-li"><a class="header-ul-a" href="turnos.html"><span class="material-symbols-outlined">calendar_today</span>Turnos</a></li>
         </ul>
-        <button class="logout"><span class="material-symbols-outlined">Logout</span>Cerrar sesión</button>
+        <button class="logout"><span class="material-symbols-outlined">logout</span>Cerrar sesión</button>
     </header>
     <main>
-      <div class="header1 container-encabezado">
-          <div class="h2-dash">
-            <span class="sub">Cliente desde 2023</span>
-            <h2 class="h2-dash">Juan Pérez</h2>
-          </div>
-          <a href="tutores.html" class="back">← Volver</a>
-          
-        </div>
-      <div class="container">
-        <div class="grid">
-          <!-- Datos -->
-          <section class="card">
-            <h3>Información</h3>
-            <p><strong>Teléfono:</strong> 099 123 456</p>
-            <p><strong>Email:</strong> juan@email.com</p>
-            <p><strong>Dirección:</strong> Av. Italia 1234</p>
-            <p><strong>Cédula:</strong> 4.123.456-7</p>
-
-            <div class="actions">
-              <button class="btn-primary">Editar</button>
+        <section class="container-encabezado2">
+            <div>
+                <span class="sub">Cliente desde 2023</span>
+                <h2 class="h2-dash">Juan Pérez</h2>
             </div>
-          </section>
-
-          <!-- Estadísticas -->
-          <section class="card">
-            <h3>Resumen</h3>
-            <div class="stat">
-              <span class="stat-number">2</span>
-              <span class="stat-label">Mascotas</span>
-            </div>
-
-            <div class="stat">
-              <span class="stat-number">5</span>
-              <span class="stat-label">Consultas</span>
-            </div>
-          </section>
-        </div>
-
-        <!-- Mascotas -->
-        <section class="card full">
-          <div class="container-h3-detalleMascota">
-            <h3 class="h3-detalleMascota">Mascotas</h3>
-          </div>    
-          <table>
-            <tr>
-              <th>Nombre</th>
-              <th>Especie</th>
-              <th>Raza</th>
-              <th>Edad</th>
-              <th></th>
-            </tr>
-
-            <tr>
-              <td>Firulais</td>
-              <td>Perro</td>
-              <td>Labrador</td>
-              <td>4 años</td>
-              <td><a href="paciente-detalle.html" class="btn-link">Ver</a></td>
-            </tr>
-
-            <tr>
-              <td>Mishi</td>
-              <td>Gato</td>
-              <td>Común</td>
-              <td>2 años</td>
-              <td><a href="paciente-detalle.html" class="btn-link">Ver</a></td>
-            </tr>
-          </table>
+            <a href="tutores.html" class="back">← Volver</a>
         </section>
-      </div>
+        <div class="container">
+            <div class="grid" style="padding:0;margin-bottom:20px;">
+                <section class="card">
+                    <h3>Información</h3>
+                    <p style="margin-bottom:6px;"><strong>Teléfono:</strong> 099 123 456</p>
+                    <p style="margin-bottom:6px;"><strong>Email:</strong> juan@email.com</p>
+                    <p style="margin-bottom:6px;"><strong>Dirección:</strong> Av. Italia 1234</p>
+                    <p style="margin-bottom:16px;"><strong>Cédula:</strong> 4.123.456-7</p>
+                    <div class="actions">
+                        <button class="btn-primary">Editar</button>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h3>Resumen</h3>
+                    <div class="stat">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Mascotas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Consultas</span>
+                    </div>
+                </section>
+            </div>
+
+            <section class="card">
+                <div class="container-h3-detalleMascota">
+                    <h3 class="h3-detalleMascota">Mascotas</h3>
+                </div>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Especie</th>
+                        <th>Raza</th>
+                        <th>Edad</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>Firulais</td>
+                        <td>Perro</td>
+                        <td>Labrador</td>
+                        <td>4 años</td>
+                        <td><a href="paciente-detalle.html" class="btn-link">Ver →</a></td>
+                    </tr>
+                    <tr>
+                        <td>Mishi</td>
+                        <td>Gato</td>
+                        <td>Común</td>
+                        <td>2 años</td>
+                        <td><a href="paciente-detalle.html" class="btn-link">Ver →</a></td>
+                    </tr>
+                </table>
+            </section>
+        </div>
     </main>
-  </body>
+</body>
 </html>

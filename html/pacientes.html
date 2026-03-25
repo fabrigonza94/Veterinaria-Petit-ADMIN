@@ -1,115 +1,103 @@
-
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pacientes</title>
-        <link rel="stylesheet" href="../style/style.css">
-        <link rel="stylesheet" href="../style/fonts.css">
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    </head>
-    <body>
-        <header class="header">
-            <h1 class="header-h1"><span class="material-symbols-outlined">Pet_supplies</span>Vet Petit</h1>
-            <ul class="header-ul">
-                <li class="header-ul-li "><a class="header-ul-a" href="../index.html"><span class="material-symbols-outlined">home</span> Dashboard</a></li>
-                <li class="header-ul-li "><a class="header-ul-a" href="pacientes.html"><span class="material-symbols-outlined">Pets</span>Pacientes</a></li>
-                <li class="header-ul-li "><a class="header-ul-a" href="tutores.html"><span class="material-symbols-outlined">Person</span>Tutores</a></li>
-                <li class="header-ul-li "><a class="header-ul-a" href="turnos.html"><span class="material-symbols-outlined">Calendar_today</span>Turnos</a></li>
-            </ul>
-            <button class="logout"><span class="material-symbols-outlined">Logout</span>Cerrar sesión</button>
-        </header>
-        <main>
-            <section class="container-encabezado">
-                <h2 class="h2-dash">Pacientes</h2>
-                <a href="#modalMascota" class="btn">+ Nueva Mascota</a>
-            </section>
-            <div class="search-group">
-                <label for="buscar">Buscar...</label>
-                <div class="input-icon">
-                    <input type="text" id="buscar" placeholder="Buscar mascota...">
-                </div>
-            </div>
-            <section class="turnos">
-                <h3 class="turnos-title">Pacientes</h3>
-                <table class="table">
-                    <thead>
-                        <tr class="table-encabezado">
-                            <th>Nombre</th>
-                            <th>Especie</th>
-                            <th>Raza</th>
-                            <th>Tutor</th>
-                            <th>Ultima Consulta</th>
-                            <th>Detalles</th>
-                            <th>Estado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Firulais</td>
-                            <td>Perro</td>
-                            <td>Labrador</td>
-                            <td>Juan Pérez</td>
-                            <td>10/06/2026</td>
-                            <td>
-                                <a href="paciente-detalle.html" class="btn-ver">Ver</a>
-                                <button class="btn-editar">Editar</button>
-                            </td>
-                            <td>
-                                <span class="badge socio">Socio</span>
-                            </td>
-                        </tr>
-                        <!-- Acá después van los turnos dinámicos -->
-                    </tbody>
-                </table>
-            </section>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacientes — Vet Petit</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-h1"><span class="material-symbols-outlined">pet_supplies</span>Vet Petit</h1>
+        <ul class="header-ul">
+            <li class="header-ul-li"><a class="header-ul-a" href="../index.html"><span class="material-symbols-outlined">home</span>Dashboard</a></li>
+            <li class="header-ul-li active"><a class="header-ul-a" href="pacientes.html"><span class="material-symbols-outlined">pets</span>Pacientes</a></li>
+            <li class="header-ul-li"><a class="header-ul-a" href="tutores.html"><span class="material-symbols-outlined">person</span>Tutores</a></li>
+            <li class="header-ul-li"><a class="header-ul-a" href="turnos.html"><span class="material-symbols-outlined">calendar_today</span>Turnos</a></li>
+        </ul>
+        <button class="logout"><span class="material-symbols-outlined">logout</span>Cerrar sesión</button>
+    </header>
+    <main>
+        <section class="container-encabezado">
+            <h2 class="h2-dash">Pacientes</h2>
+            <a href="#modalMascota" class="btn">+ Nueva Mascota</a>
+        </section>
+        <div class="search-group">
+            <span class="material-symbols-outlined" style="color:#6b8090;font-size:20px;">search</span>
+            <input type="text" id="buscar" placeholder="Buscar mascota...">
+        </div>
+        <section class="turnos">
+            <h3 class="turnos-title">Listado de Pacientes</h3>
+            <table class="table">
+                <thead>
+                    <tr class="table-encabezado">
+                        <th>Nombre</th>
+                        <th>Especie</th>
+                        <th>Raza</th>
+                        <th>Tutor</th>
+                        <th>Última Consulta</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Firulais</strong></td>
+                        <td>Perro</td>
+                        <td>Labrador</td>
+                        <td>Juan Pérez</td>
+                        <td>10/06/2026</td>
+                        <td><span class="badge socio">Socio</span></td>
+                        <td style="display:flex;gap:8px;align-items:center;">
+                            <a href="paciente-detalle.html" class="btn-ver">Ver</a>
+                            <button class="btn-editar">Editar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-            <!--------------------------- MODAL -------------------->
-            <!-- BOTÓN QUE ABRE -->
-             <div class="btntutor">
-                <a href="#modalMascota" class="btn">+ Nueva Mascota</a>
-            </div>
-            <div id="modalMascota" class="modal">
-                <div class="modal-content">
-                    <a href="#" class="close">✖</a>
-                    <h3>Nueva Mascota</h3>
-                    <label>Nombre</label>
-                    <input type="text" placeholder="Ej: Firulais">
-                    <label>Especie</label>
-                    <select>
-                        <option>Seleccionar</option>
-                        <option>Perro</option>
-                        <option>Gato</option>
-                        <option>Otro</option>
-                    </select>
-                    <label>Raza</label>
-                    <input type="text" placeholder="Ej: Labrador">
-                    <label>Sexo</label>
-                    <select>
-                        <option>Seleccionar</option>
-                        <option>Macho</option>
-                        <option>Hembra</option>
-                    </select>
-                    <label>Fecha de nacimiento</label>
-                    <input type="date">
-                    <label>Peso (kg)</label>
-                    <input type="number" step="0.1" placeholder="Ej: 12.5">
-                    <div class="form-group">
+        <div id="modalMascota" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">✖</a>
+                <h3>Nueva Mascota</h3>
+                <label>Nombre</label>
+                <input type="text" placeholder="Ej: Firulais">
+                <label>Especie</label>
+                <select>
+                    <option>Seleccionar</option>
+                    <option>Perro</option>
+                    <option>Gato</option>
+                    <option>Otro</option>
+                </select>
+                <label>Raza</label>
+                <input type="text" placeholder="Ej: Labrador">
+                <label>Sexo</label>
+                <select>
+                    <option>Seleccionar</option>
+                    <option>Macho</option>
+                    <option>Hembra</option>
+                </select>
+                <label>Fecha de nacimiento</label>
+                <input type="date">
+                <label>Peso (kg)</label>
+                <input type="number" step="0.1" placeholder="Ej: 12.5">
+                <div class="form-group">
                     <label>¿Es socio?</label>
                     <div class="radio-group">
-                        <label><input type="radio" name="esSocio" value="true" checked>Socio</label>
-                        <label><input type="radio" name="esSocio" value="false">No socio</label>
-                    </div>
-                    </div>
-                    <label>Observaciones</label>
-                    <textarea rows="3" placeholder="Notas importantes..."></textarea>
-                    <div class="modal-buttons">
-                        <a href="#" class="cancel">Cancelar</a>
-                        <button class="save">Guardar</button>
+                        <label><input type="radio" name="esSocio" value="true" checked> Socio</label>
+                        <label><input type="radio" name="esSocio" value="false"> No socio</label>
                     </div>
                 </div>
+                <label>Observaciones</label>
+                <textarea rows="3" placeholder="Notas importantes..."></textarea>
+                <div class="modal-buttons">
+                    <a href="#" class="cancel">Cancelar</a>
+                    <button class="save">Guardar</button>
+                </div>
             </div>
-        </main>
-    </body>
+        </div>
+    </main>
+</body>
 </html>
